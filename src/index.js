@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import react from "react";
+import reactDOM from "react-dom";
+import "../src/Style/main.css"//fine
+import NavBar from "./navigation/navBar.js"
+import JumboTron from "./jumbotron/jumboTron.js"
+import Feature from "./feature/feature.js"
+import Section from "./section/section.js"
+import Footer from "./footer/footer.js"
+reactDOM.render(<NavBar/>, document.getElementById("navigation"));
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+reactDOM.render(<JumboTron heading = "App Looks Great 🤩"/>, document.querySelector(".jumbotron"));
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reactDOM.render(<Feature heading = "Discover The Amazing New App"/>, document.querySelector("#section1"));
+
+reactDOM.render(<Section/>, document.querySelector("#section2"))
+
+reactDOM.render(<Footer/>, document.querySelector("footer"))
